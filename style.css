@@ -1,0 +1,423 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+.hat,
+.face,
+.face__top,
+.top {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+.hat__top {
+  width: 175px;
+  height: 110px;
+  border-radius: 55px 55px 0 0;
+  background: #000;
+}
+
+.hat__bottom {
+  width: 250px;
+  height: 15px;
+  background: #000;
+}
+
+.face {
+  position: relative;
+  width: 175px;
+  height: 250px;
+  background: #FFE4C4;
+  border-radius: 0 0 175px 175px;
+}
+
+.face__top,
+.face__middle,
+.face__bottom {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.face__top {
+   top: 50px;
+}
+
+.eyebrows,
+.eyes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eyebrows {
+  width: 130px;
+  margin-bottom: 10px;
+  animation-name: animationEyebrows;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
+
+.eyes {
+  width: 110px;
+}
+
+.eyebrow {
+  width: 35px;
+  height: 3px;
+  border-radius: 6px 6px 0 0;
+  background: black;
+}
+
+.eye {
+  width: 14px;
+  height: 14px;
+  background: black;
+  border-radius: 50%;
+  animation-name: animationEye;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+
+}
+
+
+.face__middle {
+  top: 80px;
+  
+}
+
+.ear {
+  position:absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -15px;
+  width: 25px;
+  height: 50px;
+  background: #DEB887;
+  border-radius: 30%;
+}
+
+
+.ear:after {
+  display: block;
+  content: "";
+  width: 55%;
+  height: 65%;
+  border-radius: 15px;
+  background-color: #E9967A;
+}
+
+.ear-left {
+  left: -25px;
+  transform: rotate(-6deg);
+}
+
+.ear-right {
+  right: -25px;
+  transform: rotate(6deg);
+}
+
+.nose {
+  border: 20px solid transparent; 
+  border-bottom: 40px solid #DEB887;
+  border-radius: 10px;
+}
+
+.face__bottom {
+  bottom: 50px;
+}
+
+.mouth {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 55px;
+  height: 25px;
+  border-radius: 0 0 25px 25px;
+  background: pink;
+  animation-name: animationMouth;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+.teeth {
+  width: 7px;
+  height: 10px;
+  background: #fff;
+  border-left: 2px solid #f4f4f4;
+  border-right: 2px solid #f4f4f4;
+  border-bottom: 2px solid #f4f4f4;
+  border-radius: 0 0 3px 3px;
+}
+
+
+.neck,
+.body,
+.legs {
+  position: relative;
+  top: -5px;
+}
+
+.neck {
+  display: flex;
+  align-items: flex-end;
+  width: 55px;
+  height: 40px;
+  background: #FFE4C4;
+}
+
+.collar {
+  position: relative;
+  width: 100%;
+  height: 15px;
+  background: #000;
+}
+
+.collar:after,
+.collar:before {
+  display: block;
+  content: "";
+  background-color: #fff;
+}
+
+.collar:after {
+  margin: 0 auto;
+  width: 45%;
+  height: 15px;
+}
+
+.collar:before {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+}
+
+.body {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 325px;
+  height: 450px;
+  background-color: #000;
+  border-radius: 35px 35px 0 0;
+}
+
+.arms {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.arm {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  position: absolute;
+  top: -20px;
+}
+
+.sleeve {
+  width: 55px;
+  height: 300px;
+  background-color: #000;
+}
+
+.wrist {
+  width: 40px;
+  height: 15px;
+  background: #FFE4C4;
+}
+
+.hand {
+  width: 50px;
+  height: 25px;
+  background: #FFE4C4;
+}
+
+.arm:first-child {
+  left: -35%;
+  transform: rotate(45deg);
+}
+
+.arm:last-child {
+  right: -35%;
+  transform: rotate(-45deg);
+}
+
+.shirt {
+  width: 0; 
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-top: 150px solid #111;
+  margin: 0 auto;
+}
+
+.chain {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 95px;
+  height: 125px;
+  border-radius: 0 0 100% 100%;
+  border: 3px solid #f4f4f4;
+  border-top: none;
+}
+
+.chain:before {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  width: 8px;
+  height: 16px;
+  background: #fff;
+}
+
+.cross {
+  position: relative;
+  top: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.cross:after, 
+.cross:before {
+  display: block;
+  content: "";
+  background-color: #fff;
+}
+
+.cross:after {
+  width: 5px;
+  height: 80px;
+}
+
+.cross:before {
+  position: absolute;
+  top: 25px;
+  height: 5px;
+  width: 50px;
+}
+
+.top {
+  animation-name: animationTop;
+  animation-duration: 3.5s;
+  animation-iteration-count: infinite;
+  z-index: 99;
+}
+
+.legs {
+  width: 325px;
+  height: 350px;
+  padding: 0 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.leg {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.trouser-leg {
+  position: relative;
+  width: 85px;
+  height: 100%;
+  background-color: #000;
+}
+
+
+.trouser-leg:after {
+display: block;
+content: "";
+width: 50%;
+height: 100%;
+background-color: #111;
+}
+
+.shoe {
+  height: 45px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.shoe:before,
+.shoe:after {
+  display: block;
+  content: "";
+}
+
+.shoe:before {
+  border-left: 45px solid transparent;
+  border-bottom: 45px solid #232323;
+
+}
+
+.shoe:after {
+  width: 40px;
+  height: 45px;
+  background-color: #232323;
+}
+
+@keyframes animationEye {
+  from {
+    height: 4px;
+  }
+
+  to {
+    height: 14px;
+  }
+}
+
+
+@keyframes animationEyebrows {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes animationMouth {
+  0% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes animationTop {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(150px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
